@@ -8,7 +8,13 @@
 // Your code:
 export const arrayOfMultiples = (num, length) => {
     // ... write code ...
+    let numbers = [];
+    for (let i = 1; i <= length; i = i + 1) {
+        numbers.push(num * i);
+    }
+    console.log(numbers);
 };
+arrayOfMultiples(7, 5);
 
 // 2 =================================
 // Change direction of array
@@ -21,7 +27,13 @@ export const arrayOfMultiples = (num, length) => {
 // Your code:
 export const changeDirection = (array) => {
 // ... write code ...
+    let numbers = [];
+    for (let i = array.length - 1; i >= 0; i = i - 1) {
+        numbers.push(array[i]);
+    }
+    console.log(numbers);
 };
+changeDirection([0, 1, 2, 3]);
 
 // 3 =================================
 // Create function that takes two arrays and return object with two keys - bigger array, sum all numbers
@@ -32,4 +44,18 @@ export const changeDirection = (array) => {
 // Your code:
 export const biggerArray = (array1, array2) => {
 // ... write code ...
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let i = 0; i < array1.length; i = i + 1) {
+        sum1 = sum1 + array1[i];
+    }
+    for (let i = 0; i < array2.length; i = i + 1) {
+        sum2 = sum2 + array2[i];
+    }
+    if (sum1 > sum2) {
+        console.log({array: array1, sum: sum1});
+    } else {
+        console.log({array: array2, sum: sum2});
+    }
 };
+biggerArray([1,2,3,4,5], [50,50]);
